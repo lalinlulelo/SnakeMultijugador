@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Multiplayer Snake</title>
+	<link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+
+	<div id = "div_nombre">
+		<input type="text" id="nombre" placeholder="Enter your name" /><br />
+		<button type="button" id = "button_nombre" onClick="">Connect</button>
+		<p id="nombOcul"></p>		
+	</div>
+	
+	<div id = "div_puntuaciones" style=" display:none;">
+		<div id= "div_listaPuntuaciones" style="border:4px solid Red; height:500px; width:250px;"></div>	
+		<button type="button" id = "button_regresar" onClick="">Back</button>
+	</div>
+	
+	<div id="div_salas" style="display: none;">
+		<div id="div_listaSalas" style="border:4px solid Red; height:350px; width:250px;"></div>
+		<input type="text" id="sala" placeholder="Write room's name" style="width:250px"/><br />
+		<input type="text" id="tam" placeholder="Select the number of players (2, 3 or 4)" style="width:250px" /><br />
+		<button type="button" id = "button_crearSala" onClick="">Create room</button>
+		<button type="button" id = "button_unirSala" onClick="">Join a created room</button>
+		<button type="button" id = "button_actualizar" onClick="">Refresh</button>
+		<button type="button" id = "button_puntuaciones" onClick="">Hall of fame</button>
+		
+		<p id="salOcul"></p>
+	</div>
+	
+	<div id = "div_juego" style="float:left; display: none;">
+		<div id="div_listaJugadores" style="position:absolute; border:4px solid Red; height:350px; width:250px;"></div>
+		<p id ="juegOcul" style="position:absolute; left:25px; top:500px;"></p>
+		<button type="button" disabled id="button_empezar" onClick="" style="position:absolute; left:25px; top:550px;">Start</button>
+		<button type="button" id="button_cerrar" onClick="" style="position:absolute; left:100px; top:550px;">Exit</button>
+		<br />
+		<div style="position:absolute; left:300px;">
+			<canvas id="playground" width="640" height="480"></canvas>
+		</div>	
+		
+		<div id="console-container" style="position:absolute; left:950px;">
+			<div id="console"></div>
+		</div>			
+	</div>
+	
+	
+	<script src="app.js"></script>
+</body>
+</html>
